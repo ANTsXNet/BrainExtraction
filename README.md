@@ -7,7 +7,7 @@ Deep learning app made for T1-weighted MRI brain extraction using ANTsRNet
 * Training data: IXI, NKI, Kirby, and Oasis
 * Unet model (see ``Scripts/Training/``).
 * Template-based data augmentation
-* Lower resolution training (image size = [80, 96, 96])
+* Lower resolution training (template size = [80, 96, 96])
 
 ## Sample usage
 
