@@ -9,7 +9,7 @@ Deep learning app made for T1-weighted MRI brain extraction using ANTsRNet
 * Template-based data augmentation
 * Lower resolution training (template size = [80, 96, 96])
 
-## Sample usage
+## Sample prediction usage
 
 ```
 #
