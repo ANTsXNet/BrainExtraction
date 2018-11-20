@@ -13,7 +13,6 @@ if( length( args ) != 3 )
   inputFileName <- args[1]
   outputFileName <- args [2]
   reorientTemplateFileName <- args[3]
-  weightsFileName <- args[4]
   }
 
 classes <- c( "background", "brain" )
@@ -37,7 +36,7 @@ unetModel <- createUnetModel3D( c( resampledImageSize, channelSize ),
   convolutionKernelSize = c( 5, 5, 5 ),
   deconvolutionKernelSize = c( 5, 5, 5 ) )
 
-cat( "Loading weights file", weightsFileName )
+cat( "Loading weights file" )
 startTime <- Sys.time()
 weightsFileName <- getPretrainedNetwork( "brainExtraction" )
 load_model_weights_hdf5( unetModel, filepath = weightsFileName )
