@@ -4,10 +4,10 @@ library( keras )
 
 args <- commandArgs( trailingOnly = TRUE )
 
-if( length( args ) != 4 )
+if( length( args ) != 3 )
   {
   helpMessage <- paste0( "Usage:  Rscript doBrainExtraction.R",
-    " inputFile outputFile reorientationTemplate modelWeights \n" )
+    " inputFile outputFile reorientationTemplate\n" )
   stop( helpMessage )
   } else {
   inputFileName <- args[1]
@@ -39,6 +39,7 @@ unetModel <- createUnetModel3D( c( resampledImageSize, channelSize ),
 
 cat( "Loading weights file", weightsFileName )
 startTime <- Sys.time()
+weightsFileName <- getPretrainedNetwork( "brainExtraction" )
 load_model_weights_hdf5( unetModel, filepath = weightsFileName )
 endTime <- Sys.time()
 elapsedTime <- endTime - startTime
