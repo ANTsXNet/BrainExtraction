@@ -14,7 +14,7 @@ Deep learning app made for T1-weighted MRI brain extraction using ANTsRNet
 ```
 #
 #  Usage:
-#    Rscript doBrainExtraction.R inputImage outputImage reorientationTemplate weights
+#    Rscript doBrainExtraction.R inputImage outputImage reorientationTemplate
 #
 #  MacBook Pro 2016 (no GPU)
 #
