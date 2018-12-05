@@ -32,9 +32,10 @@ resampledImageSize <- dim( reorientTemplate )
 
 unetModel <- createUnetModel3D( c( resampledImageSize, channelSize ),
   numberOfOutputs = numberOfClassificationLabels,
-  numberOfLayers = 4, numberOfFiltersAtBaseLayer = 16, dropoutRate = 0.0,
-  convolutionKernelSize = c( 5, 5, 5 ),
-  deconvolutionKernelSize = c( 5, 5, 5 ) )
+  numberOfLayers = 4, numberOfFiltersAtBaseLayer = 8, dropoutRate = 0.0,
+  convolutionKernelSize = c( 3, 3, 3 ), deconvolutionKernelSize = c( 2, 2, 2 ),
+  weightDecay = 1e-5 )
+
 
 cat( "Loading weights file" )
 startTime <- Sys.time()
