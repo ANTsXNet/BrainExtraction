@@ -39,7 +39,11 @@ unetModel <- createUnetModel3D( c( resampledImageSize, channelSize ),
 
 cat( "Loading weights file" )
 startTime <- Sys.time()
-weightsFileName <- getPretrainedNetwork( "brainExtraction" )
+weightsFileName <- paste0( getwd(), "/brainExtractionWeights.h5" )
+if( ! file.exists( weightsFileName ) )
+  {
+  weightsFileName <- getPretrainedNetwork( "brainExtraction", weightsFileName )
+  }
 load_model_weights_hdf5( unetModel, filepath = weightsFileName )
 endTime <- Sys.time()
 elapsedTime <- endTime - startTime
