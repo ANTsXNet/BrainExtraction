@@ -2,6 +2,12 @@
 
 Deep learning app made for T1-weighted MRI brain extraction using ANTsRNet
 
+## Prerequisites
+
+* [R](https://www.r-project.org) installation
+* [ANTsR](https://github.com/ANTsX/ANTsR) installation
+* [ANTsRNet](https://github.com/ANTsX/ANTsRNet) installation
+
 ## Model training notes
 
 * Training data: IXI, NKI, Kirby, and Oasis
