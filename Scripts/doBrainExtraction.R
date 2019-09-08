@@ -49,10 +49,6 @@ endTime <- Sys.time()
 elapsedTime <- endTime - startTime
 cat( "  (elapsed time:", elapsedTime, "seconds)\n" )
 
-unetModel %>% compile( loss = loss_multilabel_dice_coefficient_error,
-  optimizer = optimizer_adam( lr = 0.0001 ),
-  metrics = c( multilabel_dice_coefficient ) )
-
 # Process input
 
 startTimeTotal <- Sys.time()
