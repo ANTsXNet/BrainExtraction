@@ -53,12 +53,12 @@ Total elapsed time: 26.87205 seconds
 ```
 #
 #  Usage:
-#    python doBrainExtraction.py inputImage outputImage reorientationTemplate
+#    doBrainExtraction.py inputImage outputImage reorientationTemplate
 #
 #  MacBook Pro 2016 (no GPU)
 #
 
-$ python Scripts/doBrainExtraction.py Data/Example/1097782_defaced_MPRAGE.nii.gz outputProbabilityMask.nii.gz Data/Template/S_template3_resampled.nii.gz
+$ Scripts/doBrainExtraction.py Data/Example/1097782_defaced_MPRAGE.nii.gz outputProbabilityMask.nii.gz Data/Template/S_template3_resampled.nii.gz
 
 Using TensorFlow backend.
 Reading reorientation template /Users/ntustison/Pkg/ANTsXNetApps/BrainExtraction/Data/Template/S_template3_resampled.nii.gz
