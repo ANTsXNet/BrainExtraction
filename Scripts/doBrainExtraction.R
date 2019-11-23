@@ -44,7 +44,7 @@ if( ! file.exists( weightsFileName ) )
   {
   weightsFileName <- getPretrainedNetwork( "brainExtraction", weightsFileName )
   }
-load_model_weights_hdf5( unetModel, filepath = weightsFileName )
+unetModel$load_weights( weightsFileName )
 endTime <- Sys.time()
 elapsedTime <- endTime - startTime
 cat( "  (elapsed time:", elapsedTime, "seconds)\n" )
